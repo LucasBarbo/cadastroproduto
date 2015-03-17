@@ -16,8 +16,7 @@ public class cadastroServlet extends HttpServlet {
        
     
     public cadastroServlet() {
-        super();
-        // TODO Auto-generated constructor stub
+        
     }
 
 	
@@ -30,6 +29,13 @@ public class cadastroServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String descricao = request.getParameter("descricao");
 		double valor = Double.parseDouble(request.getParameter("valor"));
+		
+		Produto produto = new Produto();
+		produto.setDescricao(descricao);
+		produto.setId(id);
+		produto.setValor(valor);
+		
+		
 		
 		
 	  
